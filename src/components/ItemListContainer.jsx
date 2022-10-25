@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function ItemListContainer() {
+export default function ItemListContainer({greeting}) {
   return (
     <div style={{ display:'flex', justifyContent:'start', marginTop: 50, marginLeft: 50}}>
 <Card sx={{ maxWidth: 345 }}>
@@ -18,7 +18,7 @@ export default function ItemListContainer() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Bienvenido!
+            {greeting}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Bienvenido a la tienda de Love Is a Spaceship, donde podras adquirir tanto su música en formato físico como su merchandising.
@@ -27,6 +27,5 @@ export default function ItemListContainer() {
       </CardActionArea>
     </Card>
     </div>
-    
   );
 }

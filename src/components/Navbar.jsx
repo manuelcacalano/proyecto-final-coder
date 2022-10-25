@@ -11,7 +11,7 @@ import CartWidget from './CartWidget';
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color = "secondary">
+      <AppBar position="static" color="secondary">
         <Toolbar>
           <IconButton
             size="large"
