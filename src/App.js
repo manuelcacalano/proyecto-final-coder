@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-      <NavBar color={"secondary"}/>
+      <NavBar />
       <ItemListContainer greeting={"Bienvenido!"} />
       <Footer />
     </>
