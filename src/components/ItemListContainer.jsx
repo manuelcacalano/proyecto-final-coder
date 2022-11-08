@@ -1,31 +1,33 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import React from "react";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import "./ItemListContainer";
+import { productosHC } from "./data.js";
+import ItemList from "./ItemList";
+export default function ItemListContainer({ greeting }) {
+  const { idcategory } = useParams();
 
-export default function ItemListContainer({greeting}) {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    const productosPromise = new Promise((res, rej) => {
+      setTimeout(() => {
+        res(productosHC);
+      }, 2000);
+    });
+
+    productosPromise.then((res) => {
+      if (idcategory) {
+        setProductos(res.filter((item) => item.category == idcategory));
+      } else {
+        setProductos(res);
+      }
+    });
+  }, [idcategory]);
+
   return (
-    <div style={{ display:'flex', justifyContent:'start', marginTop: 50, marginLeft: 50}}>
-<Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="100"
-          image="https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg"
-          alt="love is a spaceship logo"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {greeting}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Bienvenido a la tienda de Love Is a Spaceship, donde podras adquirir tanto su música en formato físico como su merchandising.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div style={{ border: "2px solid red", margin: "10px" }}>
+      <ItemList productos={productos} />;
     </div>
   );
 }
