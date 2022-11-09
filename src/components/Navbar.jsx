@@ -45,9 +45,14 @@ const pages = [
             }}>
             LOVE IS A SPACESHIP MERCH
           </Typography>
-          <Button color="inherit">
-            <CartWidget />
+          <Button color="inherit" href="/checkout" component="a">
+            <CartWidget/>
           </Button>
+          <Typography href="/contacto" component="a"sx={{
+              color: "inherit",
+              textDecoration: "none",
+              display: { xs: "none", md: "flex" }
+            }}>CONTACTO</Typography>
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,4 +1,5 @@
 import React from "react";
+import { productosHC } from "./data";
 import ItemCount from "./ItemCount";
 
 export default function ItemDetail({ producto }) {
@@ -6,16 +7,16 @@ export default function ItemDetail({ producto }) {
     alert("quiere agregar " + x + " de este item: " + producto.name);
   }
   return (
-    <div style={{ border: "2px solid violet", margin: "10px" }}>
+    <div style={{ border: "2px solid black", margin: "10px" }}>
       {producto.id ? (
         <>
           {producto.name}
           <br />
-          CATEGORIA: {producto.category}
+          Categoría: {producto.category}
           <br />
-          PRECIO: {producto.precio}
+          Precio: {producto.precio}
           <br />
-          STOCK: {producto.stock}
+          Stock: {producto.stock}
           <br />
           <ItemCount ini={1} max={producto.stock} addItem={addItem} />
         </>

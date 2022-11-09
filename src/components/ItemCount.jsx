@@ -20,7 +20,7 @@ export default function ItemCount({ ini, max, addItem }) {
       {count}
       <button onClick={sumar}>+</button>
       <br />
-      <button onClick={() => addItem(count)}>AGREGAR</button>
+      <button onClick={() => addItem(count)}>Agregar</button>
     </div>
   );
 }
