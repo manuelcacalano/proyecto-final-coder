@@ -34,7 +34,7 @@ const pages = [
           <MenuNavbar />
                  
           </IconButton>
-          <Typography href="/" variant="h6" component="a" nowrap sx={{
+          <Typography href="/" variant="h6" component="a"  sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
