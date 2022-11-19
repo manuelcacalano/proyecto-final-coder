@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import CartWidget from './CartWidget';
 import MenuNavbar from './MenuNavbar';
+import { Link } from "react-router-dom";
+
 
 const pages = [
   { label: "Home", link: "/" },

@@ -17,7 +17,7 @@ export default function ItemDetail({ producto }) {
           <br />
           Categoría: {producto.category}
           <br />
-          Precio: {producto.precio}
+          Precio: ${producto.precio}
           <br />
           Stock: {producto.stock}
           <br />

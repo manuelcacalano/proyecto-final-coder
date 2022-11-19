@@ -26,8 +26,8 @@ export default function ItemListContainer({ greeting }) {
   }, [idcategory]);
 
   return (
-    <div style={{ border: "2px solid black", margin: "10px" }}>
-      <ItemList productos={productos} />;
+    <div style={{ justifyContent:"center",display:"grid",backgroundColor:"#F2DEBA",border: "2px solid black"}}>
+      <ItemList productos={productos} />
     </div>
   );
 }
