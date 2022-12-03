@@ -1,17 +1,17 @@
-import { Info } from "@mui/icons-material";
-import React from "react";
-import { productosHC } from "./data";
-import ItemCount from "./ItemCount";
+import React, { useContext } from 'react';
+import ItemCount from './ItemCount';
+import { contextoGeneral } from '../components/ContextContainer';
 
 export default function ItemDetail({ producto }) {
-  function addItem(x) {
-    alert("quiere agregar " + x + " de este item: " + producto.name);
+  const { carrito, addItem } = useContext(contextoGeneral);
+  function onAdd(cant) {
+    addItem(producto, cant);
   }
   return (
     <div style={{ border: "2px solid black", margin: "10px" }}>
       {producto.id ? (
         <>
-          <a href=''><img src={producto.image} width="200" height="200"/></a>
+          <a href=''><img src={producto.imgUrl} width="200" height="200"/></a>
           <br />
           {producto.name}
           <br />
@@ -21,7 +21,7 @@ export default function ItemDetail({ producto }) {
           <br />
           Stock: {producto.stock}
           <br />
-          <ItemCount ini={1} max={producto.stock} addItem={addItem} />
+          <ItemCount ini={1} max={producto.stock} onAdd={onAdd} />
         </>
       ) : (
         <>Loading...</>

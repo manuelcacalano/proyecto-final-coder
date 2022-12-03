@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { initializeApp } from "firebase/app";
+
+initializeApp({
+  apiKey: "AIzaSyDzYUEkXT8AWYT3aFnKLx3LXVa7qtlAZmI",
+  authDomain: "loveisaspaceshipstore.firebaseapp.com",
+  projectId: "loveisaspaceshipstore",
+  storageBucket: "loveisaspaceshipstore.appspot.com",
+  messagingSenderId: "216627671953",
+  appId: "1:216627671953:web:9f2c29fba0d81f010da030",
+  measurementId: "G-8B2L1CXM9E"
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -11,7 +23,6 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
+

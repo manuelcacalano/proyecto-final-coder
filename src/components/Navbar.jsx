@@ -8,6 +8,8 @@ import * as React from 'react';
 import CartWidget from './CartWidget';
 import MenuNavbar from './MenuNavbar';
 import { Link } from "react-router-dom";
+import { contextoGeneral } from '../components/ContextContainer';
+
 
 
 const pages = [
@@ -20,6 +22,29 @@ const pages = [
 ];
 
  export default function Navbar() {
+  const { carrito } = React.useContext(contextoGeneral);
+  const [cant, setCant] = React.useState(0);
+  React.useEffect(() => {
+    setCant(carrito.reduce((acc, item) => acc + item.quantity, 0));
+  }, [carrito]);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -48,7 +73,7 @@ const pages = [
             LOVE IS A SPACESHIP MERCH
           </Typography>
           <Button color="inherit" href="/checkout" component="a">
-            <CartWidget/>
+          <CartWidget cant={cant} />
           </Button>
           <Typography href="/contacto" component="a"sx={{
               color: "inherit",
