@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import ItemCount from './ItemCount';
-import { contextoGeneral } from '../components/ContextContainer';
+import { contextoGeneral } from './ContextContainer';
 
 export default function ItemDetail({ producto }) {
-  const { carrito, addItem } = useContext(contextoGeneral);
+  const {carrito , addItem } = useContext(contextoGeneral);
   function onAdd(cant) {
     addItem(producto, cant);
   }

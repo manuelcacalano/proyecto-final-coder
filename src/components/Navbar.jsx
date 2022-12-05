@@ -8,7 +8,7 @@ import * as React from 'react';
 import CartWidget from './CartWidget';
 import MenuNavbar from './MenuNavbar';
 import { Link } from "react-router-dom";
-import { contextoGeneral } from '../components/ContextContainer';
+import { contextoGeneral } from './ContextContainer';
 
 
 
@@ -27,23 +27,6 @@ const pages = [
   React.useEffect(() => {
     setCant(carrito.reduce((acc, item) => acc + item.quantity, 0));
   }, [carrito]);
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
 
   return (
