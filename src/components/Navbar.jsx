@@ -44,16 +44,8 @@ const pages = [
           <MenuNavbar />
                  
           </IconButton>
-          <Link to="/">
-          <Typography variant="h6" component="a"  sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}>
+          <Link to="/" >
+          <Typography variant="h6" component="a"  >
             LOVE IS A SPACESHIP MERCH
           </Typography>
           </Link>

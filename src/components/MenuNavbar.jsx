@@ -35,9 +35,9 @@ export default function MenuNavbar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link onClick={handleClose} to="/category/remeras" component="a">Remeras</Link>
-        <Link onClick={handleClose} to="/category/cd" component="a">CD</Link>
-        <Link onClick={handleClose} to="/category/vinilos" component="a">Vinilos</Link>
+        <MenuItem><Link onClick={handleClose} to="/category/remeras" component="a">Remeras</Link></MenuItem>
+        <MenuItem><Link onClick={handleClose} to="/category/cd" component="a">CD</Link></MenuItem>
+        <MenuItem><Link onClick={handleClose} to="/category/vinilos" component="a">Vinilos</Link></MenuItem>
       </Menu>
     </div>
   );
