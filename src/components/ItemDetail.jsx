@@ -6,6 +6,7 @@ export default function ItemDetail({ producto }) {
   const {carrito , addItem } = useContext(contextoGeneral);
   function onAdd(cant) {
     addItem(producto, cant);
+    console.log(carrito)
   }
   return (
     <div style={{ border: "2px solid black", margin: "10px" }}>

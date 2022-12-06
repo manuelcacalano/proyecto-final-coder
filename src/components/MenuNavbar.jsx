@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function MenuNavbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -34,9 +35,9 @@ export default function MenuNavbar() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose} href="/category/remeras" component="a">Remeras</MenuItem>
-        <MenuItem onClick={handleClose} href="/category/cd" component="a">CD</MenuItem>
-        <MenuItem onClick={handleClose} href="/category/vinilos" component="a">Vinilos</MenuItem>
+        <Link onClick={handleClose} to="/category/remeras" component="a">Remeras</Link>
+        <Link onClick={handleClose} to="/category/cd" component="a">CD</Link>
+        <Link onClick={handleClose} to="/category/vinilos" component="a">Vinilos</Link>
       </Menu>
     </div>
   );

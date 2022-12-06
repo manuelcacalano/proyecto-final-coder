@@ -9,7 +9,6 @@ import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
 import Navbar from './components/Navbar';
 import ContextContainer from './components/ContextContainer';
 

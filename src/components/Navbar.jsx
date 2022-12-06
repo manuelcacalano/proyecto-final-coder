@@ -44,7 +44,8 @@ const pages = [
           <MenuNavbar />
                  
           </IconButton>
-          <Typography href="/" variant="h6" component="a"  sx={{
+          <Link to="/">
+          <Typography variant="h6" component="a"  sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
@@ -55,14 +56,17 @@ const pages = [
             }}>
             LOVE IS A SPACESHIP MERCH
           </Typography>
-          <Button color="inherit" href="/checkout" component="a">
+          </Link>
+          <Link to="/checkout">
+          <Button color="inherit"  component="a">
           <CartWidget cant={cant} />
           </Button>
-          <Typography href="/contacto" component="a"sx={{
+          </Link>
+          <Link to="/contacto" component="a"sx={{
               color: "inherit",
               textDecoration: "none",
               display: { xs: "none", md: "flex" }
-            }}>CONTACTO</Typography>
+            }}>CONTACTO</Link>
         </Toolbar>
       </AppBar>
     </Box>
