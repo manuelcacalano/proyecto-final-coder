@@ -15,7 +15,6 @@ import { contextoGeneral } from './ContextContainer';
 const pages = [
   { label: "Home", link: "/" },
   { label: "Checkout", link: "/checkout" },
-  { label: "Contacto", link: "/contacto" },
   { label: "Remeras", link: "/category/remeras" },
   { label: "CD", link: "/category/cd" },
   { label: "Vinilos", link: "/category/vinilos" },
@@ -54,11 +53,6 @@ const pages = [
           <CartWidget cant={cant} />
           </Button>
           </Link>
-          <Link to="/contacto" component="a"sx={{
-              color: "inherit",
-              textDecoration: "none",
-              display: { xs: "none", md: "flex" }
-            }}>CONTACTO</Link>
         </Toolbar>
       </AppBar>
     </Box>

@@ -25,7 +25,7 @@ export default function Checkout() {
      });
 
   }
-  return <div>
+  return <div style={{ justifyContent:"center",display:"grid",backgroundColor:"#F2DEBA",border: "2px solid black"}}>
     <div>
       {carrito.map((item) => (
         <div>{"Producto: "+item.name+" / Cantidad: "+item.quantity}<span onClick={()=>removeItem(item.id)}>🗑️</span></div>
