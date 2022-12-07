@@ -33,7 +33,7 @@ export default function ContextContainer({ children }) {
     setTotalAPagar(total);
   }, [carrito])
 
-  return <contextoGeneral.Provider value={{ carrito, addItem, removeItem, clear, totalAPagar }}>{children}</contextoGeneral.Provider>;
+  return <contextoGeneral.Provider value={{ carrito, addItem, removeItem, clear, totalAPagar}}>{children}</contextoGeneral.Provider>;
 }
 
 
